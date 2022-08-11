@@ -1,4 +1,15 @@
 module ConfigRbsGenerator
   VERSION: String
-  # See the writing guide of rbs: https://github.com/ruby/rbs#guides
+
+  def self.run: () -> String
+
+  class Outputs
+    @text: String
+
+    attr_reader text: ::String
+
+    def initialize: () -> void
+    def add_method_definition: ([::Symbol, (::String | ::Integer)] setting) -> ::String
+    def finalize: -> ::String
+  end
 end
