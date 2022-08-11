@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require_relative '../lib/config_rbs_generator'
+
+puts '== generate started... =='
+puts ConfigRbsGenerator.run
+puts 'Settings RBS generated!'

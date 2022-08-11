@@ -2,8 +2,19 @@
 
 require_relative 'test_helper'
 
-class TestConfigRbsGenerator < Minitest::Test
-  def test_that_it_has_a_version_number
+describe ConfigRbsGenerator do
+  it 'has a version number' do
     refute_nil ::ConfigRbsGenerator::VERSION
+  end
+
+  describe '.run' do
+    it 'covers all settings' do
+      assert_equal <<~SETTINGS, ConfigRbsGenerator.run
+        class Settings
+          def size: () -> Integer
+          def text: () -> String
+        end
+      SETTINGS
+    end
   end
 end
