@@ -23,7 +23,15 @@ module ConfigRbsGenerator
     end
 
     def add_method_definition(setting)
-      @text += "  def #{setting[0]}: () -> #{setting[1].class}\n"
+      @text += "  def #{setting[0]}: () -> "
+
+      if setting[1].instance_of?(Array)
+        klasses = setting[1].map(&:class)
+        klasses.uniq!
+        @text += "Array[#{klasses.join(' | ')}]\n"
+      else
+        @text += "#{setting[1].class}\n"
+      end
     end
 
     def finalize

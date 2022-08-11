@@ -1,2 +1,6 @@
 size: 2
 text: How are you?
+array:
+  - 10
+  - Nice to meet you!
+  - Goodbye.
