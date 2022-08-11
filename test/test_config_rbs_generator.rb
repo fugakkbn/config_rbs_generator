@@ -13,6 +13,7 @@ describe ConfigRbsGenerator do
         class Settings
           def size: () -> Integer
           def text: () -> String
+          def array: () -> Array[Integer | String]
         end
       SETTINGS
     end
