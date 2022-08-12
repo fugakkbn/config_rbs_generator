@@ -10,10 +10,10 @@ describe ConfigRbsGenerator do
   describe '.run' do
     it 'covers all settings' do
       assert_equal <<~SETTINGS, ConfigRbsGenerator.run
-        class Settings
-          def size: () -> Integer
-          def text: () -> String
-          def array: () -> Array[Integer | String]
+        module Settings
+          def self.size: () -> Integer
+          def self.text: () -> String
+          def self.array: () -> Array[Integer | String]
         end
       SETTINGS
     end

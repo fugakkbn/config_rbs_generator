@@ -19,11 +19,11 @@ module ConfigRbsGenerator
     attr_reader :text
 
     def initialize
-      @text = "class #{Config.const_name}\n"
+      @text = "module #{Config.const_name}\n"
     end
 
     def add_method_definition(setting)
-      @text += "  def #{setting[0]}: () -> "
+      @text += "  def self.#{setting[0]}: () -> "
 
       if setting[1].instance_of?(Array)
         klasses = setting[1].map(&:class)
