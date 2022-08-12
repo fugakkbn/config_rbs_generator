@@ -11,8 +11,8 @@ describe ConfigRbsGenerator::Outputs do
 
     it 'added "def hello: () -> String" at the end line' do
       assert_equal <<~TEXT, @outputs.add_method_definition(@setting)
-        class Settings
-          def hello: () -> String
+        module Settings
+          def self.hello: () -> String
       TEXT
     end
 
@@ -24,8 +24,8 @@ describe ConfigRbsGenerator::Outputs do
 
       it 'added "def profile: () -> Array[String | Integer]" at the end line' do
         assert_equal <<~TEXT, @outputs.add_method_definition(@setting)
-          class Settings
-            def profile: () -> Array[String | Integer]
+          module Settings
+            def self.profile: () -> Array[String | Integer]
         TEXT
       end
     end
@@ -38,7 +38,7 @@ describe ConfigRbsGenerator::Outputs do
 
     it 'added "end" at the end line' do
       assert_equal <<~TEXT, @outputs.finalize
-        class Settings
+        module Settings
         end
       TEXT
     end
