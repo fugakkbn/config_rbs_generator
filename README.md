@@ -1,3 +1,4 @@
+[![Gem Version](https://badge.fury.io/rb/config_rbs_generator.svg)](https://badge.fury.io/rb/config_rbs_generator)
 [![test - Ruby 3.1](https://github.com/fugakkbn/config_rbs_generator/actions/workflows/test_ruby_3.1.yml/badge.svg)](https://github.com/fugakkbn/config_rbs_generator/actions/workflows/test_ruby_3.1.yml)
 [![RuboCop - Ruby 3.1](https://github.com/fugakkbn/config_rbs_generator/actions/workflows/rubocop_ruby_3.1.yml/badge.svg)](https://github.com/fugakkbn/config_rbs_generator/actions/workflows/rubocop_ruby_3.1.yml)
 [![test - Ruby 3.0](https://github.com/fugakkbn/config_rbs_generator/actions/workflows/test_ruby_3.0.yml/badge.svg)](https://github.com/fugakkbn/config_rbs_generator/actions/workflows/test_ruby_3.0.yml)
