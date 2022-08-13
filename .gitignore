@@ -7,4 +7,8 @@
 /spec/reports/
 /tmp/
 
+# bundler
 Gemfile.lock
+
+# rbenv
+.ruby-version
