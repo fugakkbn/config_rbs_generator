@@ -29,6 +29,29 @@ describe ConfigRbsGenerator::Outputs do
         TEXT
       end
     end
+
+    describe 'case of the second element of setting is Config::Options' do
+      def setup
+        @outputs = ConfigRbsGenerator::Outputs.new
+        @setting =
+          Settings.map.with_index { |s, i|
+            s if i == 3
+          }.compact.first
+      end
+
+      it 'section becomes self and its child elements are also generated' do
+        assert_equal <<~TEXT, @outputs.add_method_definition(@setting)
+          module Settings
+            def self.section: () -> self
+            def self.size: () -> Integer
+            def self.text: () -> String
+            def self.yeah: () -> self
+            def self.mettya: () -> self
+            def self.holiday: () -> String
+            def self.paragraph: () -> Array[String]
+        TEXT
+      end
+    end
   end
 
   describe '#finalize' do

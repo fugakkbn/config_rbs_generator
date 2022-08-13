@@ -4,3 +4,12 @@ array:
   - 10
   - Nice to meet you!
   - Goodbye.
+section:
+  size: 3
+  text: Hello World!
+  yeah:
+    mettya:
+      holiday: Sunday
+  paragraph:
+    - paragraph1
+    - paragraph2
