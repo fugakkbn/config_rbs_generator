@@ -52,6 +52,23 @@ describe ConfigRbsGenerator::Outputs do
         TEXT
       end
     end
+
+    describe 'case of Array whose elements are Config::Options instances' do
+      def setup
+        @outputs = ConfigRbsGenerator::Outputs.new
+        @setting =
+          Settings.map.with_index { |s, i|
+            s if i == 4
+          }.compact.first
+      end
+
+      it 'is to be generated Array[untyped]' do
+        assert_equal <<~TEXT, @outputs.add_method_definition(@setting)
+          module Settings
+            def self.uho: () -> Array[untyped]
+        TEXT
+      end
+    end
   end
 
   describe '#finalize' do

@@ -21,6 +21,7 @@ describe ConfigRbsGenerator do
           def self.mettya: () -> self
           def self.holiday: () -> String
           def self.paragraph: () -> Array[String]
+          def self.uho: () -> Array[untyped]
         end
       SETTINGS
     end
