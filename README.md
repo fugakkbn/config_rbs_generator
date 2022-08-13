@@ -1,3 +1,6 @@
+[![test](https://github.com/fugakkbn/config_rbs_generator/actions/workflows/test.yml/badge.svg)](https://github.com/fugakkbn/config_rbs_generator/actions/workflows/test.yml)
+[![RuboCop](https://github.com/fugakkbn/config_rbs_generator/actions/workflows/rubocop.yml/badge.svg)](https://github.com/fugakkbn/config_rbs_generator/actions/workflows/rubocop.yml)
+
 # ConfigRbsGenerator
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/config_rbs_generator`. To experiment with that code, run `bin/console` for an interactive prompt.
