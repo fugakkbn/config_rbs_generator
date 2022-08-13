@@ -1,18 +1,16 @@
 [![test](https://github.com/fugakkbn/config_rbs_generator/actions/workflows/test.yml/badge.svg)](https://github.com/fugakkbn/config_rbs_generator/actions/workflows/test.yml)
 [![RuboCop](https://github.com/fugakkbn/config_rbs_generator/actions/workflows/rubocop.yml/badge.svg)](https://github.com/fugakkbn/config_rbs_generator/actions/workflows/rubocop.yml)
 
-# ConfigRbsGenerator
+# config_rbs_generator
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/config_rbs_generator`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+The `config_rbs_generator` generates an RBS for the `Settings` object that can be handled by the `config` gem.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'config_rbs_generator'
+gem 'config_rbs_generator', require: false
 ```
 
 And then execute:
@@ -25,22 +23,12 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Simply run the following command in the root directory of your Rails project.
 
-## Development
+    $ bundle exec config_rbs_generate
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/config_rbs_generator. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/config_rbs_generator/blob/main/CODE_OF_CONDUCT.md).
+The RBS will then appear in the console. Place rbs file in the location of your choice and copy & paste.
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the ConfigRbsGenerator project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/config_rbs_generator/blob/main/CODE_OF_CONDUCT.md).
