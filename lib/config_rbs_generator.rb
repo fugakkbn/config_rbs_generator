@@ -30,8 +30,7 @@ module ConfigRbsGenerator
         setting[1].each { |s| add_method_definition(s) }
         @text
       elsif setting[1].instance_of?(Array)
-        klasses = setting[1].map(&:class).uniq
-        @text += "Array[#{klasses.join(' | ')}]\n"
+        convert_array_types(setting[1])
       else
         @text += "#{setting[1].class}\n"
       end
@@ -39,6 +38,17 @@ module ConfigRbsGenerator
 
     def finalize
       @text += "end\n"
+    end
+
+    private
+
+    def convert_array_types(array)
+      if array.map { |s| s.instance_of?(Config::Options) }.include?(true)
+        @text += "Array[untyped]\n"
+      else
+        klasses = array.map(&:class).uniq
+        @text += "Array[#{klasses.join(' | ')}]\n"
+      end
     end
   end
 
