@@ -15,6 +15,7 @@ jobs:
       matrix:
         ruby:
           - '3.1.2'
+    if: ${{ !contains(github.event.pull_request.labels.*.name, 'CI skip') }}
 
     steps:
     - uses: actions/checkout@v2
