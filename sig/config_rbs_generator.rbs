@@ -9,7 +9,10 @@ module ConfigRbsGenerator
     attr_reader text: ::String
 
     def initialize: () -> void
-    def add_method_definition: ([::Symbol, (::String | ::Integer | ::Array[::String | ::Integer])] setting) -> ::String
+    def add_method_definition: ([::Symbol, ::String]
+                              | [::Symbol, ::Integer]
+                              | [::Symbol, ::Array[::String | ::Integer]]
+                              | [::Symbol, Config::Options] setting) -> ::String
     def finalize: -> ::String
   end
 end

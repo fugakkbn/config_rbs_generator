@@ -14,6 +14,13 @@ describe ConfigRbsGenerator do
           def self.size: () -> Integer
           def self.text: () -> String
           def self.array: () -> Array[Integer | String]
+          def self.section: () -> self
+          def self.size: () -> Integer
+          def self.text: () -> String
+          def self.yeah: () -> self
+          def self.mettya: () -> self
+          def self.holiday: () -> String
+          def self.paragraph: () -> Array[String]
         end
       SETTINGS
     end
