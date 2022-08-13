@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.summary = 'This gem generates RBS files for `Settings` objects created by the config gem.'
   spec.homepage = 'https://github.com/fugakkbn/config_rbs_generator'
   spec.license = 'MIT'
-  spec.required_ruby_version = '>= 3.1.0'
+  spec.required_ruby_version = '>= 3.0.0'
 
   spec.metadata['allowed_push_host'] = 'https://rubygems.org'
 
