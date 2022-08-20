@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative 'config_rbs_generator/version'
+require_relative 'config_rbs_generator/railtie'
 require_relative '../config/initializers/config'
 
 module ConfigRbsGenerator
